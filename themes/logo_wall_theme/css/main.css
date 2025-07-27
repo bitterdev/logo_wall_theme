@@ -5,13 +5,20 @@ html, body {
 }
 
 .ccm-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ccm-page main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 .ccm-page .grid-container {
@@ -54,7 +61,7 @@ html, body {
     }
 }
 
-.ccm-page .footer-links {
+.ccm-page footer {
     position: fixed;
     bottom: 10px;
     width: 100%;
@@ -62,30 +69,30 @@ html, body {
     padding: 5px 0;
 }
 
-.ccm-page .footer-links ul {
+.ccm-page footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.ccm-page .footer-links li {
+.ccm-page footer li {
     display: inline-block;
 }
 
-.ccm-page .footer-links li:not(:last-child):after {
+.ccm-page footer li:not(:last-child):after {
     display: inline-block;
     content: " | ";
     color: #D3D3D3;
     margin: 0 5px;
 }
 
-.ccm-page .footer-links a {
+.ccm-page footer a {
     display: inline-block;
     text-decoration: none;
     color: #D3D3D3;
     padding-right: 5px;
 }
 
-.ccm-page .footer-links a:hover {
+.ccm-page footer a:hover {
     text-decoration: none;
 }
