@@ -19,6 +19,7 @@ html, body {
     justify-content: center;
     align-items: center;
     flex: 1;
+    padding-top: 3rem;
 }
 
 .ccm-page .grid-container {
@@ -62,11 +63,11 @@ html, body {
 }
 
 .ccm-page footer {
-    position: fixed;
-    bottom: 10px;
     width: 100%;
     text-align: center;
     padding: 5px 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .ccm-page footer ul {
