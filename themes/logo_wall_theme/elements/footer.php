@@ -13,7 +13,7 @@ use Concrete\Core\View\View;
 
     <footer>
         <?php
-        $a = new GlobalArea('Footer Copyright');
+        $a = new GlobalArea('Logo Wall Footer Navigation');
         $a->display();
         ?>
     </footer>
