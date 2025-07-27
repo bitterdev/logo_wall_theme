@@ -1,0 +1,28 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to production server
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: -avzr --ignore-errors
+          path: /
+          remote_port: 65002
+          remote_path: /home/u187151543/domains/bitter.de/public_html/packages/${{ env.PACKAGE_NAME }}
+          remote_host: 213.130.145.194
+          remote_user: u187151543
+          remote_key: ${{ secrets.PRODUCTION_SSH_KEY }}
