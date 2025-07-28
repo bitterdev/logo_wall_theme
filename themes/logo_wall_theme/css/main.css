@@ -46,6 +46,7 @@ html, body {
     width: 100%;
     height: auto;
     object-fit: contain;
+    max-width: 10vw;
 }
 
 @media (max-width: 768px) {
@@ -54,7 +55,7 @@ html, body {
     }
 
     .ccm-page img {
-        max-width: 150px;
+        max-width: 150px !important;
     }
 }
 
